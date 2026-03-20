@@ -1,0 +1,189 @@
+* {
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: bold;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 40px;
+  background-image: linear-gradient(to right, #0f171e 0%, #000000 100%);
+  color: white;
+}
+
+#inputField {
+  width: 100%;
+  max-width: 200px;
+  padding: 10px;
+  margin: 10px 0;
+  background: #1a242e;
+  border: 1px solid #333f4d;
+  color: white;
+  border-radius: 8px;
+}
+
+#saveBtn {
+  margin: 10px;
+  padding: 10px 25px;
+  text-align: center;
+  text-transform: uppercase;
+  background-image: linear-gradient(
+    to right,
+    #00a8e1 0%,
+    #12d8fa 51%,
+    #00a8e1 100%
+  );
+  color: white;
+  text-shadow: 1px 1px 4px rgb(0, 0, 0);
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  background-size: 200% auto;
+  transition: 0.5s;
+}
+
+#saveBtn:hover {
+  background-position: right center;
+  transform: scale(1.05);
+  transition: all 0.3s ease;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: flex-start;
+}
+
+li {
+  width: 250px;
+  min-height: 350px;
+  background: #182530;
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  padding: 20px;
+  transition: transform 0.2s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  position: relative;
+  margin-bottom: 0;
+}
+
+li:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.8);
+  border-color: #00a8e1;
+}
+
+.moviePoster {
+  width: 100px;
+  margin-right: 0;
+  margin-bottom: 10px;
+  border-radius: 4px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.moviePoster:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.8);
+  border-color: #00a8e1;
+}
+
+.movieInfo p {
+  margin: 4px 0;
+  font-size: 14px;
+}
+
+.deleteBtn {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  margin: 0;
+  padding: 5px 10px;
+  font-size: 10px;
+  text-transform: uppercase;
+  background-image: linear-gradient(
+    to right,
+    #e50914 0%,
+    #8e0e00 51%,
+    #e50914 100%
+  );
+  color: white;
+  text-shadow: 1px 1px 4px rgb(0, 0, 0);
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  background-size: 200% auto;
+  transition: 0.5s;
+}
+
+.deleteBtn:hover {
+  background-position: right center;
+  transform: scale(1.05);
+  transition: all 0.3s ease;
+}
+
+.personalMovieScore {
+  position: absolute;
+  bottom: 35px;
+  left: 25px;
+  margin: 0;
+  padding: 5px 10px;
+  font-size: 10px;
+  background: #0f171e;
+  border: 1px solid #00a8e1;
+  color: white;
+  border-radius: 4px;
+}
+
+.updateBtn {
+  position: absolute;
+  bottom: 10px;
+  left: 15px;
+  margin: 0;
+  background-image: linear-gradient(
+    to right,
+    #0074e1 0%,
+    #1263fa 51%,
+    #0004e1 100%
+  );
+  color: white;
+  text-shadow: 2px 2px 4px rgb(0, 0, 0);
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.5s;
+}
+
+.updateBtn:hover {
+  transform: scale(1.05);
+  transition: all 0.3s ease;
+}
+
+.aboutPage {
+  padding: 10px 25px;
+  text-align: center;
+  text-transform: uppercase;
+  background-image: linear-gradient(
+    to right,
+    #4206a360 0%,
+    #6312fa69 51%,
+    #8700e17c 100%
+  );
+  color: white;
+  text-shadow: 1px 1px 4px rgb(0, 0, 0);
+  border-radius: 10px;
+  border: none;
+  max-width: 720px;
+}

@@ -1,0 +1,47 @@
+{
+  "movies": [
+    {
+      "id": "8fc4",
+      "title": "School of Rock",
+      "poster_path": "/zXLXaepIBvFVLU25DH3wv4IPSbe.jpg",
+      "release_date": "2003-10-03",
+      "userRating": "8"
+    },
+    {
+      "id": "8eb3",
+      "title": "Casino",
+      "poster_path": "/gziIkUSnYuj9ChCi8qOu2ZunpSC.jpg",
+      "release_date": "1995-11-22",
+      "userRating": "8"
+    },
+    {
+      "id": "5622",
+      "title": "Ad Astra",
+      "poster_path": "/xBHvZcjRiWyobQ9kxBhO6B2dtRI.jpg",
+      "release_date": "2019-09-17",
+      "userRating": "7"
+    },
+    {
+      "id": "2e0b",
+      "title": "The Color of Money",
+      "poster_path": "/dVdnHmdQu3JtLAAksjTmTEF76gD.jpg",
+      "release_date": "1986-10-17",
+      "userRating": "9"
+    },
+    {
+      "id": "e026",
+      "title": "GoldenEye",
+      "poster_path": "/z0ljRnNxIO7CRBhLEO0DvLgAFPR.jpg",
+      "release_date": "1995-11-16",
+      "userRating": "7"
+    },
+    {
+      "id": "9ab6",
+      "title": "In Time",
+      "poster_path": "/3Mwj2sIONQckOZP3YwsUXF7U5I4.jpg",
+      "release_date": "2011-10-27",
+      "userRating": "8"
+    }
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
+}
