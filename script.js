@@ -4,8 +4,11 @@ const IMG_BASE_URL = "https://image.tmdb.org/t/p/w200";
 const LOCAL_API = "http://localhost:3000/movies";
 
 let movieList = document.getElementById("movieList");
+let movieListID = document.getElementById("movieListID");
 let inputField = document.getElementById("inputField");
+let inputFieldID = document.getElementById("inputFieldID");
 let saveBtn = document.getElementById("saveBtn");
+let searchByIDBtn = document.getElementById("searchByIDBtn");
 
 // render movies on the page function
 function renderMovies() {
@@ -100,7 +103,7 @@ saveBtn.addEventListener("click", async (evt) => {
     renderMovies();
     inputField.value = ""; // empty empty input field
   } else {
-    alert("Hittade ingen film!");
+    alert("Could not find that movie, try another one.");
   }
 });
 
@@ -122,5 +125,56 @@ async function updateRating(id, newRating) {
   });
   renderMovies();
 }
+
+// GET movie by ID
+async function searchMovieByID(id) {
+  movieListID.innerHTML = ""; // empty search result every time to display only one
+  try {
+    const res = await fetch(`${LOCAL_API}/${id}`);
+
+    if (!res.ok) {
+      throw new Error("Could not find a movie with that ID");
+    }
+
+    const movie = await res.json();
+
+    let li = document.createElement("li");
+    let img = document.createElement("img");
+    img.src = movie.poster_path
+      ? IMG_BASE_URL + movie.poster_path
+      : "https://via.placeholder.com/100x150";
+    img.classList.add("moviePoster");
+    li.appendChild(img);
+
+    let infoDiv = document.createElement("div");
+    infoDiv.classList.add("movieInfo");
+    infoDiv.innerHTML = `
+      <h4>Search result:</h4>
+      <p>Title: ${movie.title}</p>
+      <p>Your rating: ${movie.userRating}/10</p>
+      <p><small>Fetched movie from ID: ${movie.id}</small></p>
+    `;
+    li.appendChild(infoDiv);
+
+    let movieListID = document.getElementById("movieListID");
+    movieListID.appendChild(li);
+  } catch (error) {
+    alert(error.message);
+  }
+}
+
+// search by id button
+searchByIDBtn.addEventListener("click", (evt) => {
+  evt.preventDefault();
+
+  const id = inputFieldID.value.trim();
+
+  if (id) {
+    searchMovieByID(id);
+    inputFieldID.value = "";
+  } else {
+    alert("please enter an ID");
+  }
+});
 
 renderMovies();

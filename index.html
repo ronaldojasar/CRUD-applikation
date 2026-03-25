@@ -16,12 +16,26 @@
   <body>
     <h1>Personliga Filmtopplistan!</h1>
     <div class="main">
-      <input type="text" id="inputField" />
+      <input
+        type="text"
+        id="inputField"
+        placeholder="Search for a movie title!"
+      />
       <button id="saveBtn">Save Movie</button>
     </div>
+
     <div class="aboutPage">
       <p>Find your favorite movies & sort them by your personal rating!</p>
     </div>
     <ul id="movieList"></ul>
+    <div class="searchSection">
+      <input
+        type="text"
+        id="inputFieldID"
+        placeholder="Enter a movie ID, eg: 8eb3"
+      />
+      <button id="searchByIDBtn">Find a movie by ID</button>
+    </div>
+    <ul id="movieListID"></ul>
   </body>
 </html>

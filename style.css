@@ -47,6 +47,7 @@ body {
 #saveBtn:hover {
   background-position: right center;
   transform: scale(1.05);
+  opacity: 0.95;
   transition: all 0.3s ease;
 }
 
@@ -186,4 +187,42 @@ li:hover {
   border-radius: 10px;
   border: none;
   max-width: 720px;
+}
+
+#searchByIDBtn {
+  margin: 10px;
+  padding: 10px 25px;
+  text-align: center;
+  text-transform: uppercase;
+  background-image: linear-gradient(
+    to right,
+    #e1000083 0%,
+    #fa6f1280 51%,
+    #e1dd008c 100%
+  );
+  color: white;
+  text-shadow: 1px 1px 4px rgb(0, 0, 0);
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  background-size: 200% auto;
+  transition: 0.5s;
+}
+
+#searchByIDBtn:hover {
+  background-position: right center;
+  transform: scale(1.05);
+  opacity: 0.95;
+  transition: all 0.3s ease;
+}
+
+#inputFieldID {
+  width: 100%;
+  max-width: 200px;
+  padding: 10px;
+  margin: 10px 0;
+  background: #1a242e;
+  border: 1px solid #333f4d;
+  color: white;
+  border-radius: 8px;
 }
